@@ -17,8 +17,8 @@ public class HelloBootController {
         return resp;
     }
     
-    @RequestMapping("/env")
-    public String env() {
+    @RequestMapping("/envtest")
+    public String envtest() {
         String resp = String.format("Environment Variable: %s" , System.getenv().getOrDefault("ENVTEST", "...variable empty"));
         return resp;
     }
