@@ -15,5 +15,11 @@ public class HelloBootController {
         String resp = String.format("%s from %s", prefix, System.getenv().getOrDefault("HOSTNAME", "localhost"));
         return resp;
     }
+    
+    @GetMapping("/env")
+    public String env() {
+        String resp = String.format("Environment Variable: %s" , System.getenv().getOrDefault("ENVTEST", "...variable empty"));
+        return resp;
+    }
 
 }
